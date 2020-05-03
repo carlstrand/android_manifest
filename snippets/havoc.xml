@@ -12,7 +12,7 @@
   <remote  name="carlstrand"
            fetch="https://github.com/carlstrand"
            revision="pie" />
-  
+  <remote name="phh" fetch="https://github.com/phhusson/" />
   <remote name="opengapps" fetch="https://github.com/opengapps/"  />
   <remote name="opengapps-gitlab" fetch="https://gitlab.opengapps.org/opengapps/"  />
   
@@ -153,11 +153,18 @@
   <project path="vendor/support" name="android_vendor_support" remote="havoc" />
   <project path="vendor/themes" name="android_vendor_themes" remote="havoc" />
 
-
   <project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
   <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps-gitlab" />
   <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps-gitlab" />
   <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps-gitlab" />
   
-  
+  <project path="vendor/hardware_overlay" name="vendor_hardware_overlay" remote="phh" revision="pie" />
+  <project path="vendor/vndk" name="vendor_vndk" remote="phh" revision="master" />
+  <project path="vendor/vndk-tests" name="vendor_vndk-tests" remote="phh" revision="master" />
+  <project path="vendor/interfaces" name="vendor_interfaces" remote="phh" revision="pie" />
+
+  <!-- exfat support -->
+  <project path="external/exfat" name="exfat" remote="phh" revision="android.bp-pie" />
+
+  <project path="vendor/magisk" name="vendor_magisk" remote="phh" revision="master" />
 </manifest>
