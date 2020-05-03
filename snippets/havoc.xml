@@ -9,6 +9,13 @@
            fetch="https://github.com/Havoc-Devices"
            revision="pie" />
 
+  <remote  name="carlstrand"
+           fetch="https://github.com/carlstrand"
+           revision="pie" />
+  
+  <remote name="opengapps" fetch="https://github.com/opengapps/"  />
+  <remote name="opengapps-gitlab" fetch="https://gitlab.opengapps.org/opengapps/"  />
+  
   <!-- General -->
   <project path="art" name="android_art" remote="havoc" />
   <project path="bionic" name="android_bionic" remote="havoc" />
@@ -36,7 +43,8 @@
   <project path="device/qcom/common" name="android_device_qcom_common" remote="havoc" />
   <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="havoc" />
   <project path="device/qcom/sepolicy-legacy" name="android_device_qcom_sepolicy-legacy" remote="havoc" />
-
+  <project path="device/huawei/blanc" name="android_device_huawei_blanc" remote="carlstrand" />
+  
   <!-- External -->
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="havoc" />
   <project path="external/expat" name="android_external_expat" remote="havoc" />
@@ -145,4 +153,11 @@
   <project path="vendor/support" name="android_vendor_support" remote="havoc" />
   <project path="vendor/themes" name="android_vendor_themes" remote="havoc" />
 
+
+  <project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+  <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+  
+  
 </manifest>
